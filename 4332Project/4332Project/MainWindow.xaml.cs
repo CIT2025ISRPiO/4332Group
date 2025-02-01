@@ -62,5 +62,10 @@ namespace _4332Project
         {
             new Salakhov_4332().Show();
         }
+
+        private void StepanovButton_Click(object sender, RoutedEventArgs e)
+        {
+            new Stepanov_4332().Show();
+        }
     }
 }

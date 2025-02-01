@@ -67,6 +67,9 @@
     <Compile Include="Students\Salakhov_4332.xaml.cs">
       <DependentUpon>Salakhov_4332.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Students\Stepanov_4332.xaml.cs">
+      <DependentUpon>Stepanov_4332.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Students\Sulimov_4332.xaml.cs">
       <DependentUpon>Sulimov_4332.xaml</DependentUpon>
     </Compile>
@@ -90,14 +93,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Students\Romanov_4332.xaml">
-     <SubType>Designer</SubType>
+      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Students\Sayfut4332.xaml">
-     <SubType>Designer</SubType>
+      <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Students\Salakhov_4332.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Students\Stepanov_4332.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -132,6 +139,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Image1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

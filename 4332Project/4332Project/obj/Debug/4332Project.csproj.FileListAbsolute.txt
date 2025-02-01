@@ -84,3 +84,32 @@ C:\Users\Sayfu\OneDrive\Рабочий стол\4332Group\4332Project\4332Projec
 C:\Users\Sayfu\OneDrive\Рабочий стол\4332Group\4332Project\4332Project\obj\Debug\4332Project.csproj.CoreCompileInputs.cache
 C:\Users\Sayfu\OneDrive\Рабочий стол\4332Group\4332Project\4332Project\obj\Debug\4332Project.exe
 C:\Users\Sayfu\OneDrive\Рабочий стол\4332Group\4332Project\4332Project\obj\Debug\4332Project.pdb
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\bin\Debug\4332Project.exe.config
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\bin\Debug\4332Project.exe
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\bin\Debug\4332Project.pdb
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\4332Project.csproj.AssemblyReference.cache
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\MainWindow.g.cs
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Novikov_4332.g.cs
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Romanov_4332.g.cs
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Sayfut4332.g.cs
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Salakhov_4332.g.cs
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Stepanov_4332.g.cs
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Sulimov_4332.g.cs
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Zaripov_4332.g.cs
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\App.g.cs
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\4332Project_MarkupCompile.cache
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\4332Project_MarkupCompile.lref
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\MainWindow.baml
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Novikov_4332.baml
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Romanov_4332.baml
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Sayfut4332.baml
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Salakhov_4332.baml
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Sulimov_4332.baml
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Zaripov_4332.baml
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\Students\Stepanov_4332.baml
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\4332Project.g.resources
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\_4332Project.Properties.Resources.resources
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\4332Project.csproj.GenerateResource.cache
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\4332Project.csproj.CoreCompileInputs.cache
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\4332Project.exe
+C:\Users\Taksa\Desktop\mat_lib\geometric_lib\Stepanovv4332\4332Group\4332Project\4332Project\obj\Debug\4332Project.pdb
