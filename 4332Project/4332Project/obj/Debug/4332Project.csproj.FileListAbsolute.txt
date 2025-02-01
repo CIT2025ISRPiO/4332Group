@@ -13,3 +13,11 @@ C:\Users\ignat\4332Group\4332Project\4332Project\obj\Debug\4332Project.csproj.Ge
 C:\Users\ignat\4332Group\4332Project\4332Project\obj\Debug\4332Project.csproj.CoreCompileInputs.cache
 C:\Users\ignat\4332Group\4332Project\4332Project\obj\Debug\4332Project.exe
 C:\Users\ignat\4332Group\4332Project\4332Project\obj\Debug\4332Project.pdb
+C:\Users\ignat\4332Group\4332Project\4332Project\obj\Debug\4332Project.csproj.ResolveComReference.cache
+C:\Users\ignat\4332Group\4332Project\4332Project\bin\Debug\EntityFramework.dll
+C:\Users\ignat\4332Group\4332Project\4332Project\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\ignat\4332Group\4332Project\4332Project\bin\Debug\EntityFramework.xml
+C:\Users\ignat\4332Group\4332Project\4332Project\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\ignat\4332Group\4332Project\4332Project\bin\Debug\ru\EntityFramework.resources.dll
+C:\Users\ignat\4332Group\4332Project\4332Project\obj\Debug\4332Project_Content.g.cs
+C:\Users\ignat\4332Group\4332Project\4332Project\obj\Debug\4332Proj.B427E62E.Up2Date

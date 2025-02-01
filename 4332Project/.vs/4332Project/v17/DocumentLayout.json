@@ -3,12 +3,16 @@
   "WorkspaceRootPath": "C:\\Users\\ignat\\4332Group\\4332Project\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{BD3404EB-03E9-4E6B-963B-301B745734D8}|4332Project\\4332Project.csproj|C:\\Users\\ignat\\4332Group\\4332Project\\4332project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{BD3404EB-03E9-4E6B-963B-301B745734D8}|4332Project\\4332Project.csproj|c:\\users\\ignat\\4332group\\4332project\\4332project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{BD3404EB-03E9-4E6B-963B-301B745734D8}|4332Project\\4332Project.csproj|solutionrelative:4332project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{BD3404EB-03E9-4E6B-963B-301B745734D8}|4332Project\\4332Project.csproj|c:\\users\\ignat\\4332group\\4332project\\4332project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{BD3404EB-03E9-4E6B-963B-301B745734D8}|4332Project\\4332Project.csproj|solutionrelative:4332project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+      "AbsoluteMoniker": "D:0:0:{BD3404EB-03E9-4E6B-963B-301B745734D8}|4332Project\\4332Project.csproj|C:\\Users\\ignat\\4332Group\\4332Project\\4332project\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{BD3404EB-03E9-4E6B-963B-301B745734D8}|4332Project\\4332Project.csproj|solutionrelative:4332project\\clients.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{BD3404EB-03E9-4E6B-963B-301B745734D8}|4332Project\\4332Project.csproj|C:\\Users\\ignat\\4332Group\\4332Project\\4332project\\modeldb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{BD3404EB-03E9-4E6B-963B-301B745734D8}|4332Project\\4332Project.csproj|solutionrelative:4332project\\modeldb.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
     }
   ],
   "DocumentGroupContainers": [
@@ -23,14 +27,14 @@
             {
               "$type": "Document",
               "DocumentIndex": 1,
-              "Title": "MainWindow.xaml",
-              "DocumentMoniker": "C:\\Users\\ignat\\4332Group\\4332Project\\4332Project\\MainWindow.xaml",
-              "RelativeDocumentMoniker": "4332Project\\MainWindow.xaml",
-              "ToolTip": "C:\\Users\\ignat\\4332Group\\4332Project\\4332Project\\MainWindow.xaml",
-              "RelativeToolTip": "4332Project\\MainWindow.xaml",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
-              "WhenOpened": "2025-01-11T16:29:27.386Z",
-              "EditorCaption": ""
+              "Title": "Clients.cs",
+              "DocumentMoniker": "C:\\Users\\ignat\\4332Group\\4332Project\\4332Project\\Clients.cs",
+              "RelativeDocumentMoniker": "4332Project\\Clients.cs",
+              "ToolTip": "C:\\Users\\ignat\\4332Group\\4332Project\\4332Project\\Clients.cs",
+              "RelativeToolTip": "4332Project\\Clients.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-02-01T17:56:55.564Z"
             },
             {
               "$type": "Document",
@@ -40,10 +44,21 @@
               "RelativeDocumentMoniker": "4332Project\\MainWindow.xaml.cs",
               "ToolTip": "C:\\Users\\ignat\\4332Group\\4332Project\\4332Project\\MainWindow.xaml.cs",
               "RelativeToolTip": "4332Project\\MainWindow.xaml.cs",
-              "ViewState": "AgIAAAsAAAAAAAAAAAAgwB0AAAAnAAAAAAAAAA==",
+              "ViewState": "AgIAAJ8AAAAAAAAAAAAAwL0AAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-11T16:29:26.873Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "Modeldb.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\ignat\\4332Group\\4332Project\\4332Project\\Modeldb.edmx",
+              "RelativeDocumentMoniker": "4332Project\\Modeldb.edmx",
+              "ToolTip": "C:\\Users\\ignat\\4332Group\\4332Project\\4332Project\\Modeldb.edmx [Diagram1]",
+              "RelativeToolTip": "4332Project\\Modeldb.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2025-02-01T17:56:36.51Z"
             }
           ]
         }

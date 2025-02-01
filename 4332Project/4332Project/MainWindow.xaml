@@ -30,6 +30,9 @@
             <RowDefinition Height="*"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
+
+        <Button x:Name="ExpBtn" Width="200" Grid.Row="5" HorizontalAlignment="Center" Content="Экспорт" Click="ExpBtn_Click"/>
+        <Button x:Name="ImpBtn" Width="200" Grid.Row="7" HorizontalAlignment="Center" Content="Импорт" Click="ImpBtn_Click"/>
         <Button  Grid.Row="16" Width="200" x:Name="SidorovButton" Content="О авторе" Click="SidorovButton_Click"/>
     </Grid>
 </Window>
