@@ -1,0 +1,911 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Drawing.NET</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Drawing.DashStyle">
+      <summary>Specifies the style of the dashed lines drawn with a Pen object.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.DashStyle.Solid">
+      <summary>The line will be solid.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.DashStyle.Dash">
+      <summary>The line will be made of a series of dashes.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.DashStyle.Dot">
+      <summary>The line will be made of a series of dots.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.DashStyle.DashDot">
+      <summary>The line will be made of a repeating dash-dot pattern.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.DashStyle.DashDotDot">
+      <summary>The line will be made of a repeating dash-dot-dot pattern.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.DashStyle.Custom">
+      <summary>The line will use a custom style.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.FontStyle">
+      <summary>Specifies the style that will be applied to the text.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.FontStyle.Regular">
+      <summary>The text will not be stylized.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.FontStyle.Bold">
+      <summary>The text will be in bold.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.FontStyle.Italic">
+      <summary>
+        <para>The text will be in italic.</para>
+      </summary>
+    </member>
+    <member name="F:Xceed.Drawing.FontStyle.Underline">
+      <summary>A line will be added below the text.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.FontStyle.Strikeout">
+      <summary>A line will go through the text.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.Color">
+      <summary>Encapsulates a <em>SkiaSharp.SKColor</em> in .NET5+ or a <em>System.Drawing.Color</em> in .NET Framework.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.Point">
+      <summary>Encapsulates a <em>SkiaSharp.SKPoint</em> in .NET5+ or a <em>System.Drawing.Point</em> in NET Framework.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.PointF">
+      <summary>Encapsulates a <em>SkiaSharp.SKPoint</em> in .NET5+ or a <em>System.Drawing.PointF</em> in .NET Framework.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.RectangleF">
+      <summary>Encapsulates a <em>SkiaSharp.SKRect</em> in .NET5+ or a <em>System.Drawing.RectangleF</em> in .NET Framework.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Color.#ctor(System.Drawing.Color)">
+      <summary>Creates a new Color object from a color.</summary>
+      <param name="color">The color that will be encapsulated.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Color.GetBrightness">
+      <summary>Returns the Color's <em>brightness.</em></summary>
+    </member>
+    <member name="M:Xceed.Drawing.Color.GetHue">
+      <summary>Returns the Color's <em>hue</em>.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Color.GetSaturation">
+      <summary>Returns the Color's <em>saturation</em>.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Color.IsKnownColor(System.String)">
+      <summary>Will return <em>true</em> if the <em>value</em> string corresponds to one of the <em>SKColors</em> in .NET5+ or one of the <em>System.Drawing.KnownColor</em>
+in .NET Framework.</summary>
+      <param name="value">The string that will be evaluated.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Color.Parse">
+      <summary>Creates a Color from specific values.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Color.ToArgb">
+      <summary>Returns the Color's 32-bit <em>ARGB</em> value.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Color.Parse(System.String)">
+      <summary>Creates a Color from the <em>stringColor</em> parameter.</summary>
+      <param name="stringColor">The string that will be used to create the Color.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Color.Parse(System.Int32,System.Int32,System.Int32)">
+      <summary>Creates a Color from 8-bit color values (<em>Red</em>, <em>Green</em> &amp; <em>Blue</em>).</summary>
+      <param name="r">The <em>Red</em> component's value. Valid values go from 0 to 255.</param>
+      <param name="g">The <em>Green</em> component's value. Valid values go from 0 to 255.</param>
+      <param name="b">The <em>Blue</em> component's value. Valid values go from 0 to 255.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Color.Parse(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>Creates a Color from the four <em>ARGB</em> components' values (<em>Alpha</em>, <em>Red</em>,
+<em>Green</em> &amp; <em>Blue</em>).</summary>
+      <param name="a">The <em>Alpha</em> component's value. Valid values go from 0 to 255.</param>
+      <param name="r">The <em>Red</em> component's value. Valid values go from 0 to 255.</param>
+      <param name="g">The <em>Green</em> component's value. Valid values go from 0 to 255.</param>
+      <param name="b">The <em>Blue</em> component's value. Valid values go from 0 to 255.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Color.Parse(System.Int32,Xceed.Drawing.Color)">
+      <summary>Creates a Color based on an existing <see cref="Xceed.Drawing.NET~Xceed.Drawing.Color.html">Color</see>
+object, but with a new <em>alpha</em> value.</summary>
+      <param name="a">The new Color's <em>Alpha</em> value. Valid values go from 0 to 255.</param>
+      <param name="color">The Color object on which the new <see cref="Xceed.Drawing.NET~Xceed.Drawing.Color.html">Color</see> will
+be based.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Color.Parse(System.Int32)">
+      <summary>Creates a Color from a 32-bit <em>ARGB</em> value.</summary>
+      <param name="argb">Specifies the new Color's 32-bit <em>ARGB</em> value.</param>
+    </member>
+    <member name="P:Xceed.Drawing.Color.A">
+      <summary>Get's the Color's <em>Alpha</em> byte.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Color.B">
+      <summary>Gets the Color's <em>Blue</em> byte.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Color.G">
+      <summary>Get's the Color's <em>Green</em> byte.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Color.IsEmpty">
+      <summary>Gets if the Color is empty.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Color.Name">
+      <summary>Gets the Color's name.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Color.R">
+      <summary>Gets the Color's <em>Red</em> byte.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Color.Value">
+      <summary>Gets the value of the Color object.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ActiveBorder">
+      <summary>Creates a Color object using the <em>active border</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ActiveCaption">
+      <summary>Creates a Color object using the <em>active caption</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ActiveCaptionText">
+      <summary>Creates a Color object using the <em>active caption text</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.AliceBlue">
+      <summary>Creates a Color object using the <em>alice blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.AntiqueWhite">
+      <summary>Creates a Color object using the <em>antique white</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.AppWorkspace">
+      <summary>Creates a Color object using the <em>app workspace</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Aqua">
+      <summary>Creates a Color object using the <em>aqua</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Aquamarine">
+      <summary>Creates a Color object using the <em>aquamarine</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Azure">
+      <summary>Creates a Color object using the <em>azure</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Beige">
+      <summary>Creates a Color object using the <em>beige</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Bisque">
+      <summary>Creates a Color object using the <em>bisque</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Black">
+      <summary>Creates a Color object using the <em>black</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.BlanchedAlmond">
+      <summary>Creates a Color object using the <em>blanched almond</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Blue">
+      <summary>Creates a Color object using the <em>blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.BlueViolet">
+      <summary>Creates a Color object using the <em>blue violet</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Brown">
+      <summary>Creates a Color object using the <em>brown</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.BurlyWood">
+      <summary>Creates a Color object using the <em>burly wood</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ButtonFace">
+      <summary>Creates a Color object using the <em>button face</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ButtonHighlight">
+      <summary>Creates a Color object using the <em>button highlight</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ButtonShadow">
+      <summary>Creates a Color object using the <em>button shadow</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.CadetBlue">
+      <summary>Creates a Color object using the <em>cadet blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Chartreuse">
+      <summary>Creates a Color object using the <em>chartreuse</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Chocolate">
+      <summary>Creates a Color object using the <em>chocolate</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ControlLight">
+      <summary>Creates a Color object using the <em>control light</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ControlText">
+      <summary>Creates a Color object using the <em>control text</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Coral">
+      <summary>Creates a Color object using the <em>coral</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.CornflowerBlue">
+      <summary>Creates a Color object using the <em>cornflower blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Cornsilk">
+      <summary>Creates a Color object using the <em>cornsilk</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Crimson">
+      <summary>Creates a Color object using the <em>crimson</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Cyan">
+      <summary>Creates a Color object using the <em>cyan</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkBlue">
+      <summary>Creates a Color object using the <em>dark blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkCyan">
+      <summary>Creates a Color object using the <em>dark cyan</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkGoldenrod">
+      <summary>Creates a Color object using the <em>dark goldenrod</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkGray">
+      <summary>Creates a Color object using the <em>dark gray</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkGreen">
+      <summary>Creates a Color object using the <em>dark green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkKhaki">
+      <summary>Creates a Color object using the <em>dark khaki</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkMagenta">
+      <summary>Creates a Color object using the <em>dark magenta</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkOliveGreen">
+      <summary>Creates a Color object using the <em>dark olive green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkOrange">
+      <summary>Creates a Color object using the <em>dark orange</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkOrchid">
+      <summary>Creates a Color object using the <em>dark orchid</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkRed">
+      <summary>Creates a Color object using the <em>dark red</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkSalmon">
+      <summary>Creates a Color object using the <em>dark salmon</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkSeaGreen">
+      <summary>Creates a Color object using the <em>dark sea green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkSlateBlue">
+      <summary>Creates a Color object using the <em>dark slate blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkSlateGray">
+      <summary>Creates a Color object using the <em>dark slate gray</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkTurquoise">
+      <summary>Creates a Color object using the <em>dark turquoise</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DarkViolet">
+      <summary>Creates a Color object using the <em>dark violet</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DeepPink">
+      <summary>Creates a Color object using the <em>deep pink</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DeepSkyBlue">
+      <summary>Creates a Color object using the <em>deep sky blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Desktop">
+      <summary>Creates a Color object using the <em>desktop</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DimGray">
+      <summary>Creates a Color object using the <em>dim gray</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.DodgerBlue">
+      <summary>Creates a Color object using the <em>dodger blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Empty">
+      <summary>Creates a Color object using the <em>empty</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Firebrick">
+      <summary>Creates a Color object using the <em>firebrick</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.FloralWhite">
+      <summary>Creates a Color object using the <em>floral white</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ForestGreen">
+      <summary>Creates a Color object using the <em>forest green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Fuchsia">
+      <summary>Creates a Color object using the <em>fuchsia</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Gainsboro">
+      <summary>Creates a Color object using the <em>gainsboro</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.GhostWhite">
+      <summary>Creates a Color object using the <em>ghost white</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Gold">
+      <summary>Creates a Color object using the <em>gold</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Goldenrod">
+      <summary>Creates a Color object using the <em>goldenrod</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.GradientActiveCaption">
+      <summary>Creates a Color object using the <em>gradient active caption</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.GradientInactiveCaption">
+      <summary>Creates a Color object using the <em>gradient inactive caption</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Gray">
+      <summary>Creates a Color object using the <em>gray</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.GrayText">
+      <summary>Creates a Color object using the <em>gray text</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Green">
+      <summary>Creates a Color object using the <em>green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.GreenYellow">
+      <summary>Creates a Color object using the <em>green yellow</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Highlight">
+      <summary>Creates a Color object using the <em>highlight</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.HighlightText">
+      <summary>Creates a Color object using the <em>highlight text</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Honeydew">
+      <summary>Creates a Color object using the <em>honeydew</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.HotPink">
+      <summary>Creates a Color object using the <em>hot pink</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.HotTrack">
+      <summary>Creates a Color object using the <em>hot track</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.InactiveBorder">
+      <summary>Creates a Color object using the <em>inactive border</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.InactiveCaption">
+      <summary>Creates a Color object using the <em>inactive caption</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.InactiveCaptionText">
+      <summary>Creates a Color object using the <em>inactive caption text</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.IndianRed">
+      <summary>Creates a Color object using the <em>indian red</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Indigo">
+      <summary>Creates a Color object using the <em>indigo</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Info">
+      <summary>Creates a Color object using the <em>info</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.InfoText">
+      <summary>Creates a Color object using the <em>info text</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Ivory">
+      <summary>Creates a Color object using the <em>ivory</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Khaki">
+      <summary>Creates a Color object using the <em>khaki</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Lavender">
+      <summary>Creates a Color object using the <em>lavender</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LavenderBlush">
+      <summary>Creates a Color object using the <em>lavender blush</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LawnGreen">
+      <summary>Creates a Color object using the <em>lawn green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LemonChiffon">
+      <summary>Creates a Color object using the <em>lemon chiffon</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightBlue">
+      <summary>Creates a Color object using the <em>light blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightCoral">
+      <summary>Creates a Color object using the <em>light coral</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightCyan">
+      <summary>Creates a Color object using the <em>light cyan</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightGoldenrodYellow">
+      <summary>Creates a Color object using the <em>light goldenrod yellow</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightGray">
+      <summary>Creates a Color object using the <em>light gray</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightGreen">
+      <summary>Creates a Color object using the <em>light green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightPink">
+      <summary>Creates a Color object using the <em>light pink</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightSalmon">
+      <summary>Creates a Color object using the <em>light salmon</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightSeaGreen">
+      <summary>Creates a Color object using the <em>light sea green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightSkyBlue">
+      <summary>Creates a Color object using the <em>light sky blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightSlateGray">
+      <summary>Creates a Color object using the <em>light slate gray</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightSteelBlue">
+      <summary>Creates a Color object using the <em>light steel blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LightYellow">
+      <summary>Creates a Color object using the <em>light yellow</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Lime">
+      <summary>Creates a Color object using the <em>lime</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.LimeGreen">
+      <summary>Creates a Color object using the <em>lime green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Linen">
+      <summary>Creates a Color object using the <em>linen</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Magenta">
+      <summary>Creates a Color object using the <em>magenta</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Maroon">
+      <summary>Creates a Color object using the <em>maroon</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MediumAquamarine">
+      <summary>Creates a Color object using the <em>medium aquamarine</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MediumBlue">
+      <summary>Creates a Color object using the <em>medium blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MediumOrchid">
+      <summary>Creates a Color object using the <em>medium orchid</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MediumPurple">
+      <summary>Creates a Color object using the <em>medium purple</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MediumSeaGreen">
+      <summary>Creates a Color object using the <em>medium sea green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MediumSlateBlue">
+      <summary>Creates a Color object using the <em>medium slate blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MediumSpringGreen">
+      <summary>Creates a Color object using the <em>medium spring green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MediumTurquoise">
+      <summary>Creates a Color object using the <em>medium turquoise</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MediumVioletRed">
+      <summary>Creates a Color object using the <em>medium violet red</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Menu">
+      <summary>Creates a Color object using the <em>menu</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MenuBar">
+      <summary>Creates a Color object using the <em>menu bar</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MenuHighlight">
+      <summary>Creates a Color object using the <em>menu highlight</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MenuText">
+      <summary>Creates a Color object using the <em>menu text</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MidnightBlue">
+      <summary>Creates a Color object using the <em>midnight blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MintCream">
+      <summary>Creates a Color object using the <em>mint cream</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.MistyRose">
+      <summary>Creates a Color object using the <em>misty rose</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Moccasin">
+      <summary>Creates a Color object using the <em>moccasin</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.NavajoWhite">
+      <summary>Creates a Color object using the <em>navajo white</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Navy">
+      <summary>Creates a Color object using the <em>navy</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.OldLace">
+      <summary>Creates a Color object using the <em>old lace</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Olive">
+      <summary>Creates a Color object using the <em>olive</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.OliveDrab">
+      <summary>Creates a Color object using the <em>olive drab</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Orange">
+      <summary>Creates a Color object using the <em>orange</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.OrangeRed">
+      <summary>Creates a Color object using the <em>orange red</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Orchid">
+      <summary>Creates a Color object using the <em>orchid</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.PaleGoldenrod">
+      <summary>Creates a Color object using the <em>pale goldenrod</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.PaleGreen">
+      <summary>Creates a Color object using the <em>pale green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.PaleTurquoise">
+      <summary>Creates a Color object using the <em>pale turquoise</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.PaleVioletRed">
+      <summary>Creates a Color object using the <em>pale violet red</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.PapayaWhip">
+      <summary>Creates a Color object using the <em>papaya whip</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.PeachPuff">
+      <summary>Creates a Color object using the <em>peach puff</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Peru">
+      <summary>Creates a Color object using the <em>peru</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Pink">
+      <summary>Creates a Color object using the <em>pink</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Plum">
+      <summary>Creates a Color object using the <em>plum</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.PowderBlue">
+      <summary>Creates a Color object using the <em>powder blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Purple">
+      <summary>Creates a Color object using the <em>purple</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Red">
+      <summary>Creates a Color object using the <em>red</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.RosyBrown">
+      <summary>Creates a Color object using the <em>rosy brown</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.RoyalBlue">
+      <summary>Creates a Color object using the <em>royal blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.SaddleBrown">
+      <summary>Creates a Color object using the <em>saddle brown</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Salmon">
+      <summary>Creates a Color object using the <em>salmon</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.SandyBrown">
+      <summary>Creates a Color object using the <em>sandy brown</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.ScrollBar">
+      <summary>Creates a Color object using the <em>scroll bar</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.SeaGreen">
+      <summary>Creates a Color object using the <em>sea green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.SeaShell">
+      <summary>Creates a Color object using the <em>sea shell</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Sienna">
+      <summary>Creates a Color object using the <em>sienna</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Silver">
+      <summary>Creates a Color object using the <em>silver</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.SkyBlue">
+      <summary>Creates a Color object using the <em>sky blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.SlateBlue">
+      <summary>Creates a Color object using the <em>slate blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.SlateGray">
+      <summary>Creates a Color object using the <em>slate gray</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Snow">
+      <summary>Creates a Color object using the <em>snow</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.SpringGreen">
+      <summary>Creates a Color object using the <em>spring green</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.SteelBlue">
+      <summary>Creates a Color object using the <em>steel blue</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Tan">
+      <summary>Creates a Color object using the <em>tan</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Teal">
+      <summary>Creates a Color object using the <em>teal</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Thistle">
+      <summary>Creates a Color object using the <em>thistle</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Tomato">
+      <summary>Creates a Color object using the <em>tomato</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Transparent">
+      <summary>Creates a Color object using the <em>transparent</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Turquoise">
+      <summary>Creates a Color object using the <em>turquoise</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Violet">
+      <summary>Creates a Color object using the <em>violet</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Wheat">
+      <summary>Creates a Color object using the <em>wheat</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.White">
+      <summary>Creates a Color object using the <em>white</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.WhiteSmoke">
+      <summary>Creates a Color object using the <em>white smoke</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Window">
+      <summary>Creates a Color object using the <em>window</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.WindowFrame">
+      <summary>Creates a Color object using the <em>window frame</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.WindowText">
+      <summary>Creates a Color object using the <em>window text</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.Yellow">
+      <summary>Creates a Color object using the <em>yellow</em> color.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.Color.YellowGreen">
+      <summary>Creates a Color object using the <em>yellow green</em> color.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Point.#ctor(System.Int32,System.Int32)">
+      <summary>Creates a new Point object from <em>x</em> &amp; <em>y</em> coordinates.</summary>
+      <param name="x">The Point's <em>x</em> coordinate.</param>
+      <param name="y">The Point's <em>y</em> coordinate.</param>
+    </member>
+    <member name="P:Xceed.Drawing.Point.X">
+      <summary>Gets or sets the Point's <em>x</em> coordinate.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Point.Y">
+      <summary>Gets or sets the Point's <em>y</em> coordinate.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.PointF.#ctor(System.Single,System.Single)">
+      <summary>Creates a new PointF object from <em>x</em> &amp; <em>y</em> coordinates.</summary>
+      <param name="x">The PointF's <em>x</em> coordinate.</param>
+      <param name="y">The PointF's <em>y</em> coordinate.</param>
+    </member>
+    <member name="P:Xceed.Drawing.PointF.X">
+      <summary>Gets or sets the PointF's <em>x</em> coordinate.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.PointF.Y">
+      <summary>Gets or sets the PointF's <em>y</em> coordinate.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.RectangleF.#ctor(System.Single,System.Single,System.Single,System.Single)">
+      <summary>Creates a new RectangleF by determining its <see cref="Xceed.Drawing.NET~Xceed.Drawing.RectangleF~Width.html">Width</see> &amp; <see cref="Xceed.Drawing.NET~Xceed.Drawing.RectangleF~Height.html">Height</see>, along with the location of its top left corner.</summary>
+      <param name="x">The left coordinate associated with the RectangleF's top left corner.</param>
+      <param name="y">The top coordinate associated with the RectangleF's top left corner.</param>
+      <param name="width">The RectangleF's <see cref="Xceed.Drawing.NET~Xceed.Drawing.RectangleF~Width.html">Width</see>.</param>
+      <param name="height">The RectangleF's <see cref="Xceed.Drawing.NET~Xceed.Drawing.RectangleF~Height.html">Height</see>.</param>
+    </member>
+    <member name="P:Xceed.Drawing.RectangleF.Bottom">
+      <summary>Gets the <em>y</em> coordinate that corresponds to the sum of the Y &amp;<see cref="Xceed.Drawing.NET~Xceed.Drawing.RectangleF~Height.html">Height</see> properties.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.RectangleF.Height">
+      <summary>Gets or sets the RectangleF's height.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.RectangleF.Left">
+      <summary>Gets the <em>x</em> coordinate that corresponds to the left edge of the RectangleF.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.RectangleF.Right">
+      <summary>Gets the <em>x</em> coordinate that corresponds to the sum of the X &amp; <see cref="Xceed.Drawing.NET~Xceed.Drawing.RectangleF~Width.html">Width</see> properties.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.RectangleF.Top">
+      <summary>Gets the <em>y</em> coordinate that corresponds to the top edge of the RectangleF.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.RectangleF.Value">
+      <summary>Gets the value of the RectangleF object.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.RectangleF.Width">
+      <summary>Gets or sets the RectangleF's width.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.RectangleF.X">
+      <summary>Gets or sets the <em>x</em> coordinate that corresponds to the upper left corner of the RectangleF.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.RectangleF.Y">
+      <summary>Gets or sets the <em>y</em> coordinate that corresponds to the upper left corner of the RectangleF.</summary>
+    </member>
+    <member name="F:Xceed.Drawing.RectangleF.Empty">
+      <summary>Creates an empty RectangleF.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.Bitmap">
+      <summary>Encapsulates a <em>SkiaSharp.SKBitmap</em> in .NET5+ or a <em>System.Drawing.Bitmap</em> in .NET Framework.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.Brush">
+      <summary>Encapsulates a <em>SkiaSharp.SKPaint</em> in .NET5+ or a <em>System.Drawing.SolidBrush</em> in .NET Framework.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.Font">
+      <summary>Encapsulates a <em>SkiaSharp.SKFont</em> in .NET5+ or a <em>System.Drawing.Font</em> in .NET Framework.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.Image">
+      <summary>Encapsulates a <em>SkiaSharp.SKImage</em> in .NET5+ or a <em>System.Drawing.Image</em> in .NET Framework.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.Pen">
+      <summary>Encapsulates a <em>SkiaSharp.SKPaint</em> in .NET5+ or a <em>System.Drawing.Pen</em> in .NET Framework.</summary>
+    </member>
+    <member name="T:Xceed.Drawing.SolidBrush">
+      <summary>Represents a Brush object with a specific <see cref="Xceed.Drawing.NET~Xceed.Drawing.Color.html">Color</see>.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Bitmap.#ctor(System.Int32,System.Int32)">
+      <summary>Creates a new Bitmap object from a width &amp; height value.</summary>
+      <param name="width">The Bitmap's width.</param>
+      <param name="height">The Bitmap's height.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Bitmap.Dispose">
+      <summary>Releases all resources used by the Bitmap.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Bitmap.FromImage(Xceed.Drawing.Image)">
+      <summary>Creates a Bitmap from an <see cref="Xceed.Drawing.NET~Xceed.Drawing.Image.html">Image</see>.</summary>
+      <param name="image">The Image that will be used to create the <see cref="Xceed.Drawing.NET~Xceed.Drawing.Bitmap.html">Bitmap</see>.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Bitmap.SetPixel(System.Int32,System.Int32,Xceed.Drawing.Color)">
+      <summary>Sets the Color of a target pixel.</summary>
+      <param name="x">The pixel's <em>x</em> coordinate.</param>
+      <param name="y">The pixel's <em>y</em> coordinate.</param>
+      <param name="color">The pixel's Color.</param>
+    </member>
+    <member name="P:Xceed.Drawing.Bitmap.Value">
+      <summary>Gets the value of the Bitmap object.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Brush.#ctor(Xceed.Drawing.Color)">
+      <summary>Creates a new Brush object from a <see cref="Xceed.Drawing.NET~Xceed.Drawing.Color.html">Color</see>.</summary>
+      <param name="color">The Color that will be used to create the <see cref="Xceed.Drawing.NET~Xceed.Drawing.Brush.html">Brush</see>.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Brush.Dispose">
+      <summary>Releases all resources used by the Brush.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Brush.Color">
+      <summary>Gets the Brush's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Color.html">Color</see>.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Font.#ctor">
+      <summary>Creates a new Font object from specific values.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Font.#ctor(System.String,System.Single,Xceed.Drawing.FontStyle)">
+      <summary>Creates a new Font object using <em>fontFamily</em>, <em>fontSize</em> &amp; <em>fontStyle</em> values.</summary>
+      <param name="fontFamily">The font family to which the created Font will belong.</param>
+      <param name="fontSize">The size of the Font that will be created.</param>
+      <param name="fontStyle">The style that will be applied to the created Font.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Font.#ctor(System.String,System.Single)">
+      <summary>Creates a new Font object using <em>fontFamily</em> &amp; <em>fontSize</em> values.</summary>
+      <param name="fontFamily">The font family to which the created Font will belong.</param>
+      <param name="fontSize">The size of the Font that will be created.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Font.Dispose">
+      <summary>Releases all resources used by the Font.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Font.FromFile(System.String)">
+      <summary>Gets the Font's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font~Name.html">Name</see> from a font
+file &amp; then returns it.</summary>
+      <param name="file">The file that will be used to get the Font's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font~Name.html">Name</see>.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Font.GetFontImage(Xceed.Drawing.Font,System.Byte[]@,System.Int32@,System.Boolean@)">
+      <summary>Gets the Font's byte array.</summary>
+      <param name="font">The Font that will be evaluated.</param>
+      <param name="image">An output parameter that contains the Font's byte array.</param>
+      <param name="imageSize">An output parameter that contains the size of the Font's byte array.</param>
+      <param name="corrupted">An output parameter that is <em>true</em> if the Font's byte array is corrupted.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Font.GetHeight(System.Single@,System.Single@)">
+      <summary>Returns the Font's height, as well as its ascent &amp; descent.</summary>
+      <param name="ascent">An output parameter that contains the Font's ascent.</param>
+      <param name="descent">An output parameter that contains the Font's descent.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Font.GetTextHeight(System.String,System.String,System.Single,System.Int32)">
+      <summary>Calculates the text's height, based on the Font's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font~Name.html">Name</see> &amp; <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font~Size.html">Size</see>, as well as
+the text block's width.</summary>
+      <param name="text">The text that will be evaluated.</param>
+      <param name="fontName">The Name of the <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font.html">Font</see> that will be
+used to calculate the text's height.</param>
+      <param name="fontSize">The Size of the <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font.html">Font</see> that will be
+used to calculate the text's height.</param>
+      <param name="columnWidthInPixels">The text block's width.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Font.GetTextWidth(System.String,System.String,System.Single)">
+      <summary>Calculates the text's width, based on the Font's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font~Name.html">Name</see> &amp; <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font~Size.html">Size</see>.</summary>
+      <param name="text">The text that will be evaluated.</param>
+      <param name="fontName">The Name of the <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font.html">Font</see> that will be
+used to calculate the text's width.</param>
+      <param name="fontSize">The Size of the <see cref="Xceed.Drawing.NET~Xceed.Drawing.Font.html">Font</see> that will be
+used to calculate the text's width.</param>
+    </member>
+    <member name="P:Xceed.Drawing.Font.Name">
+      <summary>Gets the Font's name.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Font.Size">
+      <summary>Gets the Font's size.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Font.Style">
+      <summary>Gets the Font's style.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Font.Value">
+      <summary>Gets the value of the Font object.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Image.Clone(Xceed.Drawing.Image)">
+      <summary>Creates a copy of an Image.</summary>
+      <param name="image">The Image that will be copied.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Image.CompressJPEG(Xceed.Drawing.Image,System.Int32)">
+      <summary>Creates a memory stream from a .jpeg image.</summary>
+      <param name="image">The .jpeg image that will be used to create the memory stream.</param>
+      <param name="quality">The quality of the encoding used for compressing the .jpeg.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Image.DetectFormat(System.IO.Stream)">
+      <summary>Returns the Image's format as a string.</summary>
+      <param name="stream">The stream that is associated with the evaluated Image.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Image.Dispose">
+      <summary>Releases all resources used by the Image.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Image.Draw(System.UInt32,Xceed.Drawing.RectangleF,System.Single@,System.Single@)">
+      <summary>Draw the Image based on rotation &amp; cropping values.</summary>
+      <param name="rotation">The angle that determines what kind of rotation will be applied to the Image.</param>
+      <param name="cropping">The value that determines how the Image will be cropped on its 4 sides.</param>
+      <param name="updatedWidthPercent">An output parameter for the Image's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Image~Width.html">Width</see>.</param>
+      <param name="updatedHeightPercent">An output parameter for the Image's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Image~Height.html">Height</see>.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Image.FromBitmap(Xceed.Drawing.Bitmap)">
+      <summary>Creates an Image from a <see cref="Xceed.Drawing.NET~Xceed.Drawing.Bitmap.html">Bitmap</see> object.</summary>
+      <param name="bitmap">The Bitmap object that will be used to create the <see cref="Xceed.Drawing.NET~Xceed.Drawing.Image.html">Image</see>.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Image.FromFile(System.String)">
+      <summary>Creates an Image from a file's path.</summary>
+      <param name="file">The path that will be used to create the Image.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Image.FromStream(System.IO.Stream)">
+      <summary>Creates an Image from a stream object.</summary>
+      <param name="stream">The stream object that will be used to create the Image.</param>
+    </member>
+    <member name="P:Xceed.Drawing.Image.Height">
+      <summary>Gets the Image's height.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Image.HorizontalResolution">
+      <summary>Gets the Image's horizontal resolution.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Image.Value">
+      <summary>Gets the value of the Image object.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Image.VerticalResolution">
+      <summary>Gets the Image's vertical resolution.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Image.Width">
+      <summary>Gets the Image's width.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Pen.#ctor">
+      <summary>Creates a Pen object from specific values.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Pen.#ctor(Xceed.Drawing.Color,System.Single)">
+      <summary>Creates a Pen object from a <see cref="Xceed.Drawing.NET~Xceed.Drawing.Pen~Color.html">Color</see>
+&amp; a specific <see cref="Xceed.Drawing.NET~Xceed.Drawing.Pen~Width.html">Width</see>.</summary>
+      <param name="penColor">The Pen's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Pen~Color.html">Color</see>.</param>
+      <param name="penWidth">The Pen's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Pen~Width.html">Width</see>.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Pen.#ctor(Xceed.Drawing.Color)">
+      <summary>Creates a Pen object from a <see cref="Xceed.Drawing.NET~Xceed.Drawing.Pen~Color.html">Color</see>.</summary>
+      <param name="penColor">The Pen's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Pen~Color.html">Color</see>.</param>
+    </member>
+    <member name="M:Xceed.Drawing.Pen.GetEndCap">
+      <summary>Returns the type of cap that will be used by the Pen object.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.Pen.GetLineJoin">
+      <summary>Returns the type of line join that will be used by the Pen object.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Pen.Color">
+      <summary>Gets or sets the Pen's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Color.html">Color</see>.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Pen.DashOffset">
+      <summary>Gets the dash's offset.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Pen.DashPattern">
+      <summary>Gets or sets the pattern that will be used for the dash that will be drawn by the Pen.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Pen.DashStyle">
+      <summary>Gets or sets the Pen's <see cref="Xceed.Drawing.NET~Xceed.Drawing.DashStyle.html">DashStyle</see>.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Pen.MiterLimit">
+      <summary>Gets the Pen object's miter limit.</summary>
+    </member>
+    <member name="P:Xceed.Drawing.Pen.Width">
+      <summary>Gets or sets the Pen object's width.</summary>
+    </member>
+    <member name="M:Xceed.Drawing.SolidBrush.#ctor(Xceed.Drawing.Color)">
+      <summary>Creates a Brush using a solid <see cref="Xceed.Drawing.NET~Xceed.Drawing.Color.html">Color</see>.</summary>
+      <param name="color">The SolidBrush's <see cref="Xceed.Drawing.NET~Xceed.Drawing.Color.html">Color</see>.</param>
+    </member>
+  </members>
+</doc>

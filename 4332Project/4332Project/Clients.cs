@@ -7,16 +7,19 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace _4332Project
+using System.Text.Json.Serialization;
+using System;
+
+public partial class Clients
 {
-    using System;
-    using System.Collections.Generic;
-    
-    public partial class Clients
-    {
-        public long Client_ID { get; set; }
-        public string FIO { get; set; }
-        public string Email { get; set; }
-        public Nullable<System.DateTime> BirthDate { get; set; }
-    }
+    public long Client_ID { get; set; }
+
+    [JsonPropertyName("FullName")]
+    public string FIO { get; set; }
+
+    [JsonPropertyName("E_mail")]
+    public string Email { get; set; }
+
+    [JsonPropertyName("BirthDate")]
+    public Nullable<System.DateTime> BirthDate { get; set; }
 }

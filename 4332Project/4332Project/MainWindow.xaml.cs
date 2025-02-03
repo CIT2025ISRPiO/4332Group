@@ -14,12 +14,59 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using Excel = Microsoft.Office.Interop.Excel;
+using System.Text.Json;
+using System.IO;
+using Newtonsoft.Json.Linq;
+using System.Xml;
+using System.Text.Json.Serialization;
+using System.Globalization;
+
+
+
+
 
 namespace _4332Project
 {
-    /// <summary>
-    /// Логика взаимодействия для MainWindow.xaml
-    /// </summary>
+    
+
+    //кастомный конвертатор даты для импоорта json
+    public class DateTimeConverter : JsonConverter<DateTime?>
+    {
+        private const string DateFormat = "dd.MM.yyyy";
+
+        public override DateTime? Read(ref Utf8JsonReader reader, Type typeToConvert, JsonSerializerOptions options)
+        {
+            if (reader.TokenType == JsonTokenType.Null)
+            {
+                return null;
+            }
+
+            if (reader.TokenType == JsonTokenType.String)
+            {
+                string dateString = reader.GetString();
+                if (DateTime.TryParseExact(dateString, DateFormat, CultureInfo.InvariantCulture, DateTimeStyles.None, out DateTime parsedDate))
+                {
+                    return parsedDate;
+                }
+            }
+
+            return null; 
+        }
+
+        public override void Write(Utf8JsonWriter writer, DateTime? value, JsonSerializerOptions options)
+        {
+            if (value.HasValue)
+            {
+                writer.WriteStringValue(value.Value.ToString(DateFormat));
+            }
+            else
+            {
+                writer.WriteNullValue();
+            }
+        }
+    }
+
+    
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -54,7 +101,6 @@ namespace _4332Project
                 allCrid3 = allClients
                     .Where(c => c.BirthDate.HasValue && GetAge(c.BirthDate.Value, today) >= 40)
                     .ToList();
-
             }
 
             SaveFileDialog sfd = new SaveFileDialog()
@@ -126,7 +172,6 @@ namespace _4332Project
             worksheet.Columns.AutoFit();
         }
 
-
         private void ImpBtn_Click(object sender, RoutedEventArgs e)
         {
             OpenFileDialog ofd = new OpenFileDialog()
@@ -165,9 +210,8 @@ namespace _4332Project
             {
                 for (int i = 0; i < _rows; i++)
                 {
-                    // Parse birthdate if present, else set to null
                     DateTime? birthDate = null;
-                    if (DateTime.TryParse(list[i, 2], out DateTime parsedDate)) // Assuming BirthDate is in column 3 (index 2)
+                    if (DateTime.TryParse(list[i, 2], out DateTime parsedDate))
                     {
                         birthDate = parsedDate;
                     }
@@ -176,7 +220,7 @@ namespace _4332Project
                     {
                         FIO = list[i, 0],
                         Email = list[i, 8],
-                        BirthDate = birthDate // Assign parsed birth date
+                        BirthDate = birthDate
                     });
                     lab2Entities.SaveChanges();
                 }
@@ -184,6 +228,159 @@ namespace _4332Project
 
             MessageBox.Show("Успешно!");
         }
+
+        static string FormatJsonFile(string json, string filePath)
+        {
+            try
+            {
+                
+                var jsonArray = JArray.Parse(json);
+
+                
+                string formattedJson = jsonArray.ToString(Newtonsoft.Json.Formatting.Indented);
+
+                
+                File.WriteAllText(filePath, formattedJson);
+                MessageBox.Show(formattedJson, "Содержимое JSON", MessageBoxButton.OK, MessageBoxImage.Information);
+
+                return formattedJson;
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Ошибка при обработке файла: {ex.Message}");
+                return json;
+            }
+        }
+
+        private void ImpJsonBtn_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog ofd = new OpenFileDialog()
+            {
+                DefaultExt = "*.json;",
+                Filter = "Json файлы (*.json)|*.json",
+                Title = "Выберите JSON файл базы данных"
+            };
+
+            if (ofd.ShowDialog() != true) { return; }
+
+            string json = File.ReadAllText(ofd.FileName);
+
+            // Десериализация JSON в список объектов
+            var importedClients = JsonSerializer.Deserialize<List<Clients>>(json, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+                Converters = { new DateTimeConverter() } 
+            });
+
+            if (importedClients != null)
+            {
+                using (Lab2Entities lab2Entities = new Lab2Entities())
+                {
+                    lab2Entities.Clients.AddRange(importedClients);
+                    lab2Entities.SaveChanges();
+                }
+
+                MessageBox.Show("Данные успешно загружены!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+            }
+            else
+            {
+                MessageBox.Show("Ошибка при загрузке файла!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+
+        private void ExpJsonInWordBtn_Click(object sender, RoutedEventArgs e)
+        {
+            // Открытие диалога выбора файла для импорта JSON
+            OpenFileDialog ofd = new OpenFileDialog()
+            {
+                DefaultExt = "*.json;",
+                Filter = "Json файлы (*.json)|*.json",
+                Title = "Выберите JSON файл базы данных"
+            };
+
+            if (ofd.ShowDialog() != true) { return; }
+
+            // Чтение содержимого JSON файла
+            string json = File.ReadAllText(ofd.FileName);
+
+            // Десериализация JSON в список объектов
+            var importedClients = JsonSerializer.Deserialize<List<Clients>>(json, new JsonSerializerOptions
+            {
+                PropertyNameCaseInsensitive = true,
+                Converters = { new DateTimeConverter() }
+            });
+
+            if (importedClients != null)
+            {
+                // Группируем клиентов по возрастным категориям
+                var category1 = importedClients.Where(c => c.BirthDate.HasValue && GetAge(c.BirthDate.Value, DateTime.Today) >= 20 && GetAge(c.BirthDate.Value, DateTime.Today) <= 29).ToList();
+                var category2 = importedClients.Where(c => c.BirthDate.HasValue && GetAge(c.BirthDate.Value, DateTime.Today) >= 30 && GetAge(c.BirthDate.Value, DateTime.Today) <= 39).ToList();
+                var category3 = importedClients.Where(c => c.BirthDate.HasValue && GetAge(c.BirthDate.Value, DateTime.Today) >= 40).ToList();
+
+                // Создание нового Word документа
+                var wordApp = new Microsoft.Office.Interop.Word.Application();
+                var wordDoc = wordApp.Documents.Add();
+
+                // Добавление категории 1 - 20-29 лет
+                AddCategoryToWord(wordDoc, "Категория 1 (20-29 лет)", category1);
+
+                // Добавление категории 2 - 30-39 лет
+                AddCategoryToWord(wordDoc, "Категория 2 (30-39 лет)", category2);
+
+                // Добавление категории 3 - 40+ лет
+                AddCategoryToWord(wordDoc, "Категория 3 (40+ лет)", category3);
+
+                // Сохранение документа
+                SaveFileDialog sfd = new SaveFileDialog()
+                {
+                    Filter = "Word Files|*.docx",
+                    Title = "Сохранить файл Word",
+                    FileName = "ClientsByAge.docx"
+                };
+
+                if (sfd.ShowDialog() == true)
+                {
+                    wordDoc.SaveAs2(sfd.FileName);
+                    wordDoc.Close();
+                    wordApp.Quit();
+
+                    MessageBox.Show("Файл успешно сохранен!", "Успех", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+
+                GC.Collect();
+                GC.WaitForPendingFinalizers();
+            }
+            else
+            {
+                MessageBox.Show("Ошибка при загрузке файла!", "Ошибка", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void AddCategoryToWord(Microsoft.Office.Interop.Word.Document wordDoc, string categoryTitle, List<Clients> clients)
+        {
+            // Вставляем заголовок категории
+            var paragraph = wordDoc.Paragraphs.Add();
+            paragraph.Range.Text = categoryTitle;
+            paragraph.Range.set_Style("Заголовок 1"); // Используем строковое имя стиля для заголовка
+            paragraph.Range.InsertParagraphAfter();
+
+            // Вставляем список клиентов в эту категорию
+            foreach (var client in clients)
+            {
+                var clientInfo = $"{client.FIO} - {client.BirthDate?.ToString("dd.MM.yyyy") ?? "Не указана"}";
+                paragraph = wordDoc.Paragraphs.Add();
+                paragraph.Range.Text = clientInfo;
+                paragraph.Range.InsertParagraphAfter();
+            }
+
+            // Добавление разрыва страницы после каждой категории
+            paragraph = wordDoc.Paragraphs.Add();
+            paragraph.Range.InsertBreak(Microsoft.Office.Interop.Word.WdBreakType.wdPageBreak);
+        }
+
+
+
 
     }
 }

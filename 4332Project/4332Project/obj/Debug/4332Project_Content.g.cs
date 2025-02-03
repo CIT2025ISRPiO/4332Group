@@ -10,5 +10,10 @@
 
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modeldb.context.tt")]
 [assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("modeldb.tt")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dylib")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dylib")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dll")]
+[assembly: System.Windows.Resources.AssemblyAssociatedContentFileAttribute("libskiasharp.dll")]
 
 

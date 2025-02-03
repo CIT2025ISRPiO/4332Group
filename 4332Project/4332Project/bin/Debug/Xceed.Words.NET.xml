@@ -1,0 +1,198 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doc>
+  <assembly>
+    <name>Xceed.Words.NET</name>
+  </assembly>
+  <members>
+    <member name="T:Xceed.Words.NET.DigitalCertificate">
+      <summary>Represents a holder for a X509Certificate2 certificate.</summary>
+    </member>
+    <member name="T:Xceed.Words.NET.DigitalSignature">
+      <summary>Represents a digital signature in a document.</summary>
+    </member>
+    <member name="T:Xceed.Words.NET.DocX">
+      <summary>Represents a DocX document.</summary>
+    </member>
+    <member name="T:Xceed.Words.NET.Licenser">
+      <summary>Represents the class that registers the classes defined in the Xceed.Words.NET assembly.</summary>
+    </member>
+    <member name="T:Xceed.Words.NET.SignOptions">
+      <summary>Represents the options that can be set when signing a document.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DigitalCertificate.Create(System.String,System.String)">
+      <summary>Creates a DigitalCertificate object from the certificate path and password received. This certificate will be used to sign a document with the DocX.Sign()
+method.<br /></summary>
+      <param name="certificatePath">The path to the certificate to register.</param>
+      <param name="certificatePassword">The password required to access the certificate.</param>
+    </member>
+    <member name="P:Xceed.Words.NET.DigitalCertificate.Certificate">
+      <summary>Gets the certificate associated with this object.</summary>
+    </member>
+    <member name="P:Xceed.Words.NET.DigitalSignature.CertificateIssuer">
+      <summary>Gets the issuer of the certificate needed in order to sign the document.</summary>
+    </member>
+    <member name="P:Xceed.Words.NET.DigitalSignature.CertificateOwner">
+      <summary>Gets the owner of the certificate needed in order to sign the document.</summary>
+    </member>
+    <member name="P:Xceed.Words.NET.DigitalSignature.Comments">
+      <summary>Gets the comments from the signer on the purpose for signing the document.</summary>
+    </member>
+    <member name="P:Xceed.Words.NET.DigitalSignature.IsValid">
+      <summary>Gets if the digital signature is valid and confirms that the document has not been modified since signed.</summary>
+    </member>
+    <member name="P:Xceed.Words.NET.DigitalSignature.SignTime">
+      <summary>Gets the time at which the document was signed.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.AddSignatureLine(Xceed.Document.NET.SignatureLineOptions)">
+      <summary>Adds a SignatureLine to the document.</summary>
+      <returns>The SignatureLine added to the document.</returns>
+      <param name="signatureLineOptions">The options required to create the SignatureLine in the document. By default, null.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.AreSignaturesValid">
+      <summary>Checks the validity of the digital signatures in a document.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.ConvertToPdf">
+      <summary>Converts a DocX document into a PDF document.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Copy">
+      <summary>Copies the document into a new Document.</summary>
+      <returns>A copy of the Document.</returns>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Create">
+      <summary>Creates a document.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.GetSignatures">
+      <summary>Gets the digital signatures in a document.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.IsSignatureLineSigned(Xceed.Document.NET.SignatureLine)">
+      <summary>Evaluates if a SignatureLine is signed.</summary>
+      <returns>True if the SignatureLine is signed, false otherwise.</returns>
+      <param name="signatureLine">The SignatureLine to evaluate. The evaluation checks if it is signed.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.IsSignatureLineValid(Xceed.Document.NET.SignatureLine)">
+      <summary>Evaluates if a SignatureLine is signed and if the digital signature is valid.</summary>
+      <returns>True if the SignatureLine is signed and the digital signature is valid, false otherwise.</returns>
+      <param name="signatureLine">The SignatureLine to evaluate. The evaluation checks if it is signed and if the associated digital signature is valid.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Load">
+      <summary>Loads a document into a DocX object.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.RemoveAllSignatures">
+      <summary>Removes all the digital signatures in a document.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.RemoveSignature">
+      <summary>Removes a digital signature from a document.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Save(System.String)">
+      <summary>Saves this document.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.SaveAs">
+      <summary>Saves this document but allows to set some options first.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Sign">
+      <summary>Allows to digitally sign a document.</summary>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.AreSignaturesValid(System.String)">
+      <summary>Returns true if the input document's digital signatures are all valid, false otherwise.</summary>
+      <returns>True if all the digital signatures contained in the input document are valid, false otherwise.</returns>
+      <param name="inputFileName">The path of the document. Used to validate its digital signatures.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.AreSignaturesValid(System.IO.Stream)">
+      <summary>Returns true if the input document stream's digital signatures are all valid, false otherwise.</summary>
+      <returns>True if the digital signatures contained in the input document stream are all valid, false otherwise.</returns>
+      <param name="inputStream">The path of the document stream. Used to validate its digital signatures.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Create(System.IO.Stream,Xceed.Document.NET.DocumentTypes)">
+      <summary>Creates a DocX Document using a Stream.</summary>
+      <returns>A DocX object which represents the document.</returns>
+      <param name="stream">The Stream to create the document from.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Create(System.String,Xceed.Document.NET.DocumentTypes)">
+      <summary>Creates a DocX Document using a fully qualified or relative filename.</summary>
+      <returns>A <strong>DocX</strong> object which represents the document.</returns>
+      <param name="filename">The fully qualified or relative filename.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.GetSignatures(System.String)">
+      <summary>Returns the digital signatures of the input document.</summary>
+      <returns>The list of Digital signatures found in the input document.</returns>
+      <param name="inputFileName">The path of the document. Used to retrieve the digital signatures.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.GetSignatures(System.IO.Stream)">
+      <summary>Returns the digital signatures of the input document stream.</summary>
+      <returns>The list of Digital signatures found in the input document stream.</returns>
+      <param name="inputStream">The path of the document stream. Used to retrieve the digital signatures.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.IsSigned(System.String)">
+      <summary>Returns true if the input document contains at least 1 digital signature, false otherwise.</summary>
+      <returns>True if the input document contains at least 1 digital signature, false otherwise.</returns>
+      <param name="inputFileName">The path of the document. Used to validate if that document is signed.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.IsSigned(System.IO.Stream)">
+      <summary>Returns true if the input document stream contains at least 1 digital signature, false otherwise.</summary>
+      <returns>True if the input document stream contains at least 1 digital signature, false otherwise.</returns>
+      <param name="inputStream">The document stream used to validate if that stream is signed.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Load(System.IO.Stream)">
+      <summary>Loads a document into a DocX object using a Stream.</summary>
+      <returns>A DocX object which represents the document.</returns>
+      <param name="stream">The Stream to load the document from.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Load(System.String)">
+      <summary>Loads a document into a DocX object using a fully qualified or relative filename.</summary>
+      <returns>A DocX object which represents the document.</returns>
+      <param name="filename">The fully qualified or relative filename.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.RemoveAllSignatures(System.String,System.String)">
+      <summary>Removes all the digital signatures from an input document and saves the result in an output document.</summary>
+      <param name="inputFileName">The path of the document where all the digital signatures are to be removed.</param>
+      <param name="outputFileName">The path where the document will be saved after the digital signatures are removed.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.RemoveAllSignatures(System.IO.Stream,System.IO.Stream)">
+      <summary>Removes all the digital signatures from an input document stream and saves the result in an output document stream.</summary>
+      <param name="inputStream">The path of the document stream where all the digital signatures are to be removed.</param>
+      <param name="outputStream">The path where the document stream will be saved after the digital signatures are removed.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.RemoveSignature(System.String,System.String,Xceed.Words.NET.DigitalSignature)">
+      <summary>Removes a specific digital signature from an input document and saves the result in an output document.</summary>
+      <param name="inputFileName">The path of the document where the digital signature will be removed.</param>
+      <param name="outputFileName">The path where the document will be saved ater the digital signature is removed.</param>
+      <param name="signature">The digital signature to remove.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.RemoveSignature(System.IO.Stream,System.IO.Stream,Xceed.Words.NET.DigitalSignature)">
+      <summary>Removes a specific digital signature from an input document stream and saves the result in an output document stream.</summary>
+      <param name="inputStream">The path of the document stream where the digital signature will be removed.</param>
+      <param name="outputStream">The path where the document stream will be saved ater the digital signature is removed.</param>
+      <param name="signature">The digital signature to remove.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Sign(System.String,System.String,Xceed.Words.NET.DigitalCertificate,Xceed.Words.NET.SignOptions)">
+      <summary>Signs an input document with a certificate and sign options, and saves the result in an output document.</summary>
+      <param name="inputFileName">The path of the document to sign.</param>
+      <param name="outputFileName">The path to store the signed document.</param>
+      <param name="certificate">The certificate used to sign the document.</param>
+      <param name="signOptions">The options set to sign the document. By default, null.</param>
+    </member>
+    <member name="M:Xceed.Words.NET.DocX.Sign(System.IO.Stream,System.IO.Stream,Xceed.Words.NET.DigitalCertificate,Xceed.Words.NET.SignOptions)">
+      <summary>Signs an input document stream with a certificate and sign options and saves the result in an output document stream.</summary>
+      <param name="inputStream">The stream containing the document to sign.</param>
+      <param name="outputStream">The stream that will contain the signed document.</param>
+      <param name="certificate">The certificate used to sign the stream.</param>
+      <param name="signOptions">The options set to sign the stream. By default, null.</param>
+    </member>
+    <member name="P:Xceed.Words.NET.Licenser.LicenseKey">
+      <summary>Gets or sets the license key used to license this product.</summary>
+    </member>
+    <member name="P:Xceed.Words.NET.SignOptions.Comments">
+      <summary>Gets or sets the comments on the purpose for signing the document.</summary>
+    </member>
+    <member name="P:Xceed.Words.NET.SignOptions.SignatureLineId">
+      <summary>Gets or sets the id of the SignatureLine associated with the digital signature.</summary>
+    </member>
+    <member name="P:Xceed.Words.NET.SignOptions.SignatureLineImage">
+      <summary>Gets or sets the image that will be used to sign the SignatureLine. The SignatureLineId must be set to the associated SignatureLine.</summary>
+    </member>
+    <member name="P:Xceed.Words.NET.SignOptions.SignatureLineText">
+      <summary>Gets or sets the text that will be used to sign the SignatureLine. The SignatureLineId must be set to the associated SignatureLine and the SignatureLineImage
+must be null to use this property.<br /></summary>
+    </member>
+  </members>
+</doc>
